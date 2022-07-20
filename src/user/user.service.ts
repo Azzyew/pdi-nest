@@ -20,7 +20,7 @@ export class UserService {
   async findOne(id: string) {
     try {
       return await this.userRepository.findOne({
-        select: ['id', 'name'],
+        select: ['id', 'name', 'password'],
         where: {
           id,
         },
