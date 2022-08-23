@@ -17,7 +17,7 @@ export class UserController {
   async findAll() {
     return this.userService.findAll();
   }
-  @Post()
+  @Post('create')
   async createUser(@Query() query: CreateUserDto) {
     return this.userService.createUser(query);
   }
